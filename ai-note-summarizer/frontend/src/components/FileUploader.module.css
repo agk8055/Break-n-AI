@@ -1,0 +1,109 @@
+/* frontend/src/components/FileUploader.module.css */
+
+.container {
+  max-width: 900px;
+  padding: 30px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.title {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: left;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column; /* Stack textarea and file actions vertically */
+  gap: 20px; /* Spacing between textarea and file actions */
+  margin-bottom: 25px;
+}
+
+.textAreaInput {
+  width: 100%;
+  min-height: 150px;
+  font-size: 1rem;
+}
+
+
+.fileActions {
+  display: flex;
+  gap: 15px;
+  align-items: center; /* Vertically align items */
+}
+
+.addDocumentButton {
+  /* Inherits button styles from index.css */
+}
+
+.supportedTypesText {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-top: 5px;
+  margin-left: auto; /* Push supported types text to the right */
+}
+
+
+.processButton {
+  /* Inherits button styles from index.css */
+  margin-top: 20px;
+  padding: 14px 30px; /* Slightly wider process button */
+  font-size: 1.15rem; /* Slightly larger font for process button */
+  margin-bottom: 30px; /* Added margin-bottom to create space below button */
+}
+
+
+.selectedFilesList {
+  margin-top: 20px;
+  padding-left: 20px;
+  border-left: 2px solid var(--border-color);
+}
+
+.selectedFilesList p {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.selectedFilesList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.selectedFilesList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-right: 10px;
+}
+
+.removeFileButton {
+  background-color: transparent; /* No background */
+  color: var(--accent-color);      /* Accent color text */
+  border: 1px solid var(--accent-color); /* Accent color border */
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 10px; /* Spacing from filename */
+}
+
+.removeFileButton:hover {
+  background-color: var(--accent-color); /* Accent color background on hover */
+  color: var(--background-color);      /* Dark text on hover */
+}

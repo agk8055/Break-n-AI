@@ -1,0 +1,49 @@
+/* frontend/src/components/QuestionInput.module.css */
+
+.container {
+  margin-bottom: 25px;
+}
+
+.title {
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.input {
+  width: 100%; /* Ensure input takes full width of its container */
+  box-sizing: border-box; /* Include padding and border in width */
+  font-size: 1rem;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: var(--input-background);
+  color: var(--input-text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+  /* min-height: 100px;  Remove min-height as it's not needed for single-line input */
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--hover-background), inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.askButton {
+  margin-top: 15px;
+  height: 46px;
+  line-height: normal;
+  align-self: center;
+  font-size: 1rem;
+}
+
+.inputArea {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  flex-direction: column;
+}

@@ -1,0 +1,77 @@
+/* frontend/src/components/SummaryDisplay.module.css */
+
+.container {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative; /* For positioning actions div */
+}
+
+.container:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.content {
+    font-size: 0.95rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.noSummary {
+    font-style: italic;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+/* Styles for the actions container (copy button and status) */
+.actions {
+    position: absolute; /* Position actions in top right corner of container */
+    top: 10px;          /* Adjust vertical position as needed */
+    right: 10px;         /* Adjust horizontal position as needed */
+    display: flex;
+    gap: 10px;         /* Spacing between button and status message */
+    align-items: center; /* Vertically align button and status */
+}
+
+
+.copyButton {
+    background-color: var(--input-background); /* Match input background */
+    color: var(--text-color);               /* White text */
+    border: 1px solid var(--border-color);    /* Dark border */
+    border-radius: 5px;
+    padding: 8px 14px;                      /* Smaller button padding */
+    cursor: pointer;
+    font-size: 0.9rem;                      /* Smaller font size for copy button */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.copyButton:hover {
+    background-color: var(--hover-background); /* Lighter background on hover */
+    color: var(--primary-color);             /* White text on hover */
+    border-color: var(--primary-color);       /* White border on hover */
+}
+
+
+.copyStatus {
+    font-size: 0.9rem;                      /* Smaller status message font */
+    font-style: italic;
+    color: var(--accent-color);              /* Accent color for status */
+}
