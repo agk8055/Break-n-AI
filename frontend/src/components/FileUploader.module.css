@@ -1,10 +1,15 @@
 /* frontend/src/components/FileUploader.module.css */
 
 .container {
-  max-width: 900px;
-  padding: 30px;
-  background-color: var(--background-color);
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  border-radius: 0.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
   transition: box-shadow 0.3s ease-in-out;
@@ -16,9 +21,8 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-
 .title {
-  color: var(--primary-color);
+  color: #ffffff; /* White text */
   margin-bottom: 25px;
   text-align: left;
   font-size: 2rem;
@@ -33,11 +37,17 @@
 }
 
 .textAreaInput {
+  min-height: 100px;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #333333;
+  font-family: inherit;
+  resize: vertical;
+  background-color: #111111; /* Dark gray background */
+  color: #ffffff; /* White text */
   width: 100%;
-  min-height: 150px;
   font-size: 1rem;
 }
-
 
 .fileActions {
   display: flex;
@@ -46,30 +56,42 @@
 }
 
 .addDocumentButton {
-  /* Inherits button styles from index.css */
+  padding: 0.5rem 1rem;
+  background-color: #333333; /* Dark gray button */
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.supportedTypesText {
-  font-size: 0.9rem;
-  color: var(--accent-color);
-  margin-top: 5px;
-  margin-left: auto; /* Push supported types text to the right */
+.addDocumentButton:hover {
+  background-color: #444444; /* Lighter gray on hover */
 }
-
 
 .processButton {
-  /* Inherits button styles from index.css */
+  padding: 0.75rem 1.5rem;
+  background-color: #333333; /* Dark gray button */
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  align-self: flex-start;
   margin-top: 20px;
-  padding: 14px 30px; /* Slightly wider process button */
   font-size: 1.15rem; /* Slightly larger font for process button */
   margin-bottom: 30px; /* Added margin-bottom to create space below button */
 }
 
+.processButton:hover {
+  background-color: #444444; /* Lighter gray on hover */
+}
 
 .selectedFilesList {
   margin-top: 20px;
   padding-left: 20px;
-  border-left: 2px solid var(--border-color);
+  border-left: 2px solid #333333;
 }
 
 .selectedFilesList p {
@@ -87,23 +109,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
+  background-color: #111111; /* Dark gray background */
+  border-radius: 0.5rem;
+  color: #ffffff; /* White text */
   margin-bottom: 8px;
-  padding-right: 10px;
 }
 
 .removeFileButton {
-  background-color: transparent; /* No background */
-  color: var(--accent-color);      /* Accent color text */
-  border: 1px solid var(--accent-color); /* Accent color border */
-  border-radius: 5px;
-  padding: 6px 12px;
+  padding: 0.25rem 0.5rem;
+  background-color: #333333; /* Dark gray button */
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
   cursor: pointer;
-  font-size: 0.85rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s;
   margin-left: 10px; /* Spacing from filename */
 }
 
 .removeFileButton:hover {
-  background-color: var(--accent-color); /* Accent color background on hover */
-  color: var(--background-color);      /* Dark text on hover */
+  background-color: #444444; /* Lighter gray on hover */
+}
+
+.status-message {
+  background-color: #333333; /* Dark gray background */
+  color: #ffffff; /* White text */
+}
+
+.supportedTypesText {
+  color: #cccccc; /* Light gray text */
+  font-size: 0.875rem;
+  margin: 0;
 }

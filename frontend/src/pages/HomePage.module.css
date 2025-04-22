@@ -1,84 +1,79 @@
 /* frontend/src/pages/HomePage.module.css */
 
+:root {
+  --primary-color: #2563eb;
+  --primary-light: #3b82f6;
+  --dark-color: #000000;
+  --light-color: #f8fafc;
+  --accent-color: #3aedea;
+}
+
 .pageContainer {
   width: 100%;
-  max-width: none; /* Remove max-width to allow full width expansion */
-  padding: 40px;
+  min-height: 100vh;
+  padding: 2rem;
   box-sizing: border-box;
-  display: flex; /* Flex container for page layout */
-  flex-direction: row; /* Arrange header and main content in a row */
-  align-items: flex-start; /* Align items to the top */
-  justify-content: space-between; /* Distribute space between header and main content */
-  gap: 50px; /* Spacing between header and main content columns */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  background: #000000; /* Dark blue-gray background */
 }
 
 .header {
   text-align: left;
-  margin-bottom: 0; /* Remove bottom margin from header */
-  flex: 0 0 300px; /* Fixed width for header column */
+  flex: 0 0 300px;
+  padding: 2rem;
+  background: #000000; /* Darker card background */
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 .header h1 {
-  font-size: 3.5rem;
-  letter-spacing: -0.04em;
-  margin-bottom: 10px;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  color: #ffffff; /* White text for dark theme */
 }
 
 .mainContent {
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* Stretch items to fill width of main content column */
-  flex: 1; /* Allow main content to take remaining horizontal space */
-  max-width: 1200px; /* Increased max-width to 1200px (from 1000px) - ADJUST THIS VALUE */
+  align-items: stretch;
+  flex: 1;
+  max-width: 1200px;
+  background: #000000; /* Darker card background */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 .sectionsContainer {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Spacing between sections (FileUploader, ExtractedText, Summary, etc.) */
+  gap: 2rem;
 }
-
-/* Optional: If you want to style sections further, target them within sectionsContainer */
 
 /* Responsive breakpoints */
 @media (max-width: 1200px) {
   .pageContainer {
-    gap: 30px;
-  }
-  .header h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .pageContainer {
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px;
-  }
-  .header {
-    flex: 1;
-    text-align: center;
-  }
-  .mainContent {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .pageContainer {
-    padding: 20px;
+    gap: 2rem;
+    padding: 1.5rem;
   }
   .header h1 {
     font-size: 2.5rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .pageContainer {
-    padding: 15px;
+    flex-direction: column;
   }
-  .header h1 {
-    font-size: 2rem;
+  .header {
+    flex: 1;
+    width: 100%;
+    text-align: center;
   }
 }
