@@ -25,8 +25,8 @@ Breakn AI is an intelligent web application that summarizes long academic or gen
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/agk8055/breakn-ai.git
-cd break-n-ai
+git clone https://github.com/agk8055/Break-n-AI.git
+cd Break-n-AI
 ```
 ---
 ## 2. Install dependencies
