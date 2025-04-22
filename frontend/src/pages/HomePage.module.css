@@ -39,7 +39,46 @@
 }
 
 /* Optional: If you want to style sections further, target them within sectionsContainer */
-.sectionsContainer > div {
-  /* Example: Add some margin or padding to sections if needed */
-  /* margin-bottom: 20px; */
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .pageContainer {
+    gap: 30px;
+  }
+  .header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .pageContainer {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+  }
+  .header {
+    flex: 1;
+    text-align: center;
+  }
+  .mainContent {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 20px;
+  }
+  .header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pageContainer {
+    padding: 15px;
+  }
+  .header h1 {
+    font-size: 2rem;
+  }
 }
