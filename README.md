@@ -42,12 +42,12 @@ npm install
 ```
 ---
 ## 3. Set up environment variables
--Create a .env file in the server/ directory with:
+- Create a .env file in the server/ directory with:
 ```env
 GEMINI_API_KEY=your_gemini_api_key
 PORT=5000
 ```
--Optionally set CORS config and frontend URL as needed.
+- Optionally set CORS config and frontend URL as needed.
 ---
 ## 4. Run the app
 **Start the backend:**
